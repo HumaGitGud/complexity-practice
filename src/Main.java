@@ -52,7 +52,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // O(N)
+  // O(N) becaues method uses another method that executes a loop
   public static void describeProduct(int[] nums) {
     System.out.println("About to compute the product of the array...");
     int product = computeProduct(nums);
@@ -72,7 +72,7 @@ public class Main {
 
   // Assume that the largest number is no bigger than the length
   // of the array
-  // O(N)
+  // O(N*M) because uses another method with O(N)
   public static void computeAllFactorials(int[] nums) {
     for(int num : nums) {
         int result = computeFactorial(num);
@@ -82,7 +82,7 @@ public class Main {
 
 
   // The time complexity is:
-  // O(N)
+  // O(N) because method has contains function
   public static void checkIfContainedArrayList(ArrayList<String> arr, String target) {
     if (arr.contains(target)) {
         System.out.println(target + " is present in the list");
@@ -107,7 +107,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // O(N)
+  // O(N*M) 2 loops
   public static boolean containsOverlap2(String[] wordsA, String[] wordsB) {
     Set<String> wordsSet = new HashSet<>();
     for(String word : wordsA) {
@@ -174,7 +174,7 @@ public class Main {
 
   // What is the time complexity of this method?
   // (assume the set and list have the same number of elements)
-  // O(N*M)
+  // O(N*M) because method has contains function
   public static boolean hasCommon(HashSet<String> wordSet, ArrayList<String> wordList) {
     for(String word : wordSet) {
       if(wordList.contains(word)) {
